@@ -1,3 +1,10 @@
 .varheader {
-    
+    --weight: 8vw;
+    --width: 8vw;
+    font-family: "Voto Serif GX";
+    font-variation-settings: "wght"var(--weight), "wdth"var(--width);
+    font-size: calc(2.5rem + 2vw);
+    color: white;
+    width: 100%;
+    text-align: center;
 }

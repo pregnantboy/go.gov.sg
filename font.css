@@ -1,3 +1,8 @@
+@font-face {
+	font-family: "Voto Serif GX";
+	src: url("https://www.axis-praxis.org/fonts/webfonts/VotoSerifGX.latin1.woff2");
+}
+
 /* cyrillic-ext */
 @font-face {
   font-family: 'Roboto';
