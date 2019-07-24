@@ -1,3 +1,15 @@
+.topbutton {
+    font-family: "Noto Sans";
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 0 10px;
+}
+
+.topbutton:hover {
+    font-weight: bold;
+}
+
 .jss20 {
     background-color: #424242;
 }
@@ -1247,7 +1259,7 @@ body {
 .jss64 {
     color: #fff;
     font-size: 3.75rem;
-    font-family: Roboto, serif;
+    font-family: Roboto Slab, serif;
     font-weight: 300;
     line-height: 1;
     letter-spacing: -0.00833em;

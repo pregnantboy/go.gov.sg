@@ -1,5 +1,4 @@
-
-var p = document.querySelector(".varheader");
+var p = document.querySelector(".var.header");
 
 function variableResize() {
     // Minimum & Maximum font weight
@@ -59,3 +58,78 @@ TODO:
 https://codepen.io/collection/XqRLMb/2/
 
 */
+
+// Audio code from Ruth's Demo!! - https://codepen.io/Rumyra/pen/jomXeG
+console.clear;
+// create audio context and make sure it gets activated
+const audioCtx = new AudioContext();
+let data = new Uint8Array(2);
+
+// create analyser 
+const analyserNode = new AnalyserNode(audioCtx, {
+    fftSize: 64,
+    maxDecibels: -25,
+    minDecibels: -60,
+    smoothingTimeConstant: 0.5,
+});
+
+function getAnalyserData() {
+    requestAnimationFrame(getAnalyserData);
+    analyserNode.getByteFrequencyData(data);
+
+    const minAxisValue = 1.00;
+    const maxAxisValue = 0.00;
+
+    const minEventValue = 0;
+    const maxEventValue = 255;
+
+    // Get the current event value
+    const element = document.querySelector(".clap");
+    element.style.setProperty("--sound", 1.00);
+    if (data[0] === maxEventValue) {
+        element.style.setProperty("--sound", 0.00);
+        return
+    } else {
+        fluidAxisVariation(minAxisValue, maxAxisValue, minEventValue, maxEventValue, data[0], "--sound", element);
+    }
+}
+
+// set draw after stream has started
+function getStreamData() {
+    // pipe in analysing to getUserMedia
+    return navigator.mediaDevices.getUserMedia({
+            audio: true,
+            video: false
+        })
+        .then(stream => audioCtx.createMediaStreamSource(stream))
+        .then(source => {
+            source.connect(analyserNode);
+        });
+}
+
+// resume
+window.addEventListener("click", event => {
+    audioCtx.resume();
+    getStreamData().then(getAnalyserData);
+})
+
+// Fluid Axis Variation
+function fluidAxisVariation(minimumAxisValue, maximumAxisValue, minimumEventValue, maximumEventValue, eventValue, axisCustomPropertyName, element) {
+
+    const minAxisValue = minimumAxisValue;
+    const maxAxisValue = maximumAxisValue;
+    const minEventValue = minimumEventValue;
+    const maxEventValue = maximumEventValue;
+    const currentEventValue = eventValue;
+
+    const eventPercent = (currentEventValue - minEventValue) / (maxEventValue - minEventValue);
+    const fontAxisScale = eventPercent * (minAxisValue - maxAxisValue) + maxAxisValue;
+
+    const newAxisValue = currentEventValue > maxEventValue ?
+        minAxisValue :
+        currentEventValue < minEventValue ?
+        maxAxisValue :
+        fontAxisScale;
+
+    element.style.setProperty(axisCustomPropertyName, newAxisValue);
+}

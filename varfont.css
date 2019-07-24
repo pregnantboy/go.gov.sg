@@ -1,10 +1,45 @@
-.varheader {
+.var.header {
     --weight: 8vw;
     --width: 8vw;
     font-family: "Voto Serif GX";
     font-variation-settings: "wght"var(--weight), "wdth"var(--width);
-    font-size: calc(2.5rem + 2vw);
+    font-size: 3.75rem;
     color: white;
     width: 100%;
     text-align: center;
+}
+
+.var.topbutton {
+    font-family: "San Francisco";
+    color: white;
+    font-size: 20px;
+    font-variation-settings: "GRAD"200;
+    font-weight: normal;
+    transition: font-variation-settings 0.5s ease-out;
+}
+
+.var.topbutton:hover {
+    font-variation-settings: "GRAD"800;
+    font-weight: normal;
+}
+
+.var.icon {
+    font-size: 80px;
+    font-family: "Zycon";
+    transition: all 0.5s ease-out;
+    font-variation-settings: "T1  "0, "T2  "0, "T3  "0, "T4  "0, "M1  "-1, "M2  "-1;
+    color: #e57373;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.var.icon.clap, .var.icon.clap:hover {
+    --sound: -1;
+    font-variation-settings: "T1  "var(--sound), "T2  "0, "T3  "0, "T4  "0, "M1  "-1, "M2  "-1;
+    transition: none;
+}
+
+.var.icon:hover {
+    font-variation-settings: "T1  "1, "T2  "1, "T3  "0, "T4  "0, "M1  "1, "M2  "-1;
+    color:  #60c957;
 }
