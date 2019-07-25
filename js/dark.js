@@ -3,11 +3,11 @@
 
 var shine = document.querySelector(".var.shine");
 
-const minAxisValue = 200;
+const minAxisValue = 400;
 const maxAxisValue = 20;
 
 const minEventValue = 0;
-const maxEventValue = 1000;
+const maxEventValue = 2000;
 
 shine.style.setProperty("--axis", 20);
 
