@@ -1,45 +1,72 @@
 .var.header {
-    --weight: 8vw;
-    --width: 8vw;
-    font-family: "Voto Serif GX";
-    font-variation-settings: "wght"var(--weight), "wdth"var(--width);
-    font-size: 3.75rem;
-    color: white;
-    width: 100%;
-    text-align: center;
+  --weight: 400;
+  --width: 400;
+  font-family: "Voto Serif GX";
+  font-variation-settings: "wght" var(--weight), "wdth" var(--width);
+  font-size: 3.75rem;
+  color: white;
+  width: 100%;
+  text-align: center;
 }
 
 .var.topbutton {
-    font-family: "San Francisco";
-    color: white;
-    font-size: 20px;
-    font-variation-settings: "GRAD"200;
-    font-weight: normal;
-    transition: font-variation-settings 0.5s ease-out;
+  font-family: "San Francisco";
+  color: white;
+  font-size: 20px;
+  font-variation-settings: "GRAD" 200;
+  font-weight: normal;
+  transition: font-variation-settings 0.5s ease-out;
 }
 
 .var.topbutton:hover {
-    font-variation-settings: "GRAD"800;
-    font-weight: normal;
+  font-variation-settings: "GRAD" 800;
+  font-weight: normal;
 }
 
 .var.icon {
-    font-size: 80px;
-    font-family: "Zycon";
-    transition: all 0.5s ease-out;
-    font-variation-settings: "T1  "0, "T2  "0, "T3  "0, "T4  "0, "M1  "-1, "M2  "-1;
-    color: #e57373;
-    margin-bottom: 20px;
-    cursor: pointer;
+  font-size: 80px;
+  font-family: "Zycon";
+  transition: all 0.5s ease-out;
+  font-variation-settings: "T1  " 0, "T2  " 0, "T3  " 0, "T4  " 0, "M1  "-1, "M2  "-1;
+  color: #e57373;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
-.var.icon.clap, .var.icon.clap:hover {
-    --sound: -1;
-    font-variation-settings: "T1  "var(--sound), "T2  "0, "T3  "0, "T4  "0, "M1  "-1, "M2  "-1;
-    transition: none;
+.var.icon.clap,
+.var.icon.clap:hover {
+  --sound: -1;
+  font-variation-settings: "T1  " var(--sound), "T2  " 0, "T3  " 0, "T4  " 0, "M1  "-1, "M2  "-1;
+  transition: none;
 }
 
 .var.icon:hover {
-    font-variation-settings: "T1  "1, "T2  "1, "T3  "0, "T4  "0, "M1  "1, "M2  "-1;
-    color:  #60c957;
+  font-variation-settings: "T1  " 1, "T2  " 1, "T3  " 0, "T4  " 0, "M1  " 1, "M2  "-1;
+  color: #60c957;
+}
+
+.var.shine {
+  font-family: "TINY 5x3";
+  font-size: 100px;
+  --axis: 1;
+  color: #fefefe;
+  font-weight: var(--axis);
+  text-shadow: -1px -1px 0 rgba(#fff, 0.4), 1px -1px 0 rgba(#fff, 0.4), -1px 1px 0 rgba(#fff, 0.4),
+    1px 1px 0 rgba(#fff, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
+}
+
+body.dark {
+  background-image: url('./landscape-dark.svg');
+}
+
+body.dark .jss117 {
+  background-color: #212121
+}
+
+body.dark .jss84 {
+  color: white;
+}
+
+body.dark .jss118 {
+  background-color: #212121
 }

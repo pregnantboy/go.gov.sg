@@ -1400,7 +1400,7 @@ body {
     min-height: 100vh;
     background-size: cover;
     background-color: rgb(112, 142, 154);
-    background-image: url('https://go.gov.sg/assets/landscape.svg');
+    background-image: url('./landscape.svg');
     background-repeat: no-repeat;
     background-position: top;
 }

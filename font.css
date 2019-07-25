@@ -13,6 +13,13 @@
   src: url('./fonts/Zycon.woff2');
 }
 
+@font-face {
+	src: url('./fonts/TINY5x3GX.woff2');
+	font-family:'TINY 5x3';
+	font-style: normal;
+	font-weight: 2 100;
+}
+
 /* cyrillic-ext */
 @font-face {
   font-family: 'Roboto';
