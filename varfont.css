@@ -55,12 +55,20 @@
     1px 1px 0 rgba(#fff, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
 }
 
+.var.oldicon {
+  display: none;
+}
+
+.nonvar.icon {
+  display: none;
+}
+
 body.dark {
-  background-image: url('./landscape-dark.svg');
+  background-image: url("./landscape-dark.svg");
 }
 
 body.dark .jss117 {
-  background-color: #212121
+  background-color: #212121;
 }
 
 body.dark .jss84 {
@@ -68,5 +76,5 @@ body.dark .jss84 {
 }
 
 body.dark .jss118 {
-  background-color: #212121
+  background-color: #212121;
 }
